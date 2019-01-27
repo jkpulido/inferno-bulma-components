@@ -1,4 +1,14 @@
 {
 	"name": "@jkpulido/inferno-bulma-components",
-	"version": "1.0.0"
+	"version": "1.0.0",
+	"description": "Components bulma.io",
+	"license": "MIT",
+	"repository": "jkpulido/inferno-bulma-components",
+	"main": "index.js",
+	"keywords": [
+		"inferno-bulma-components",
+		"npm",
+		"package",
+		"jkpulido"
+	]
 }
