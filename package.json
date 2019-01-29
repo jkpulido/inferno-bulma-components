@@ -10,5 +10,8 @@
 		"npm",
 		"package",
 		"jkpulido"
-	]
+	],
+	"dependencies": {
+		"bulma": "^0.7.2"
+	}
 }
