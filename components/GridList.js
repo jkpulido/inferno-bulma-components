@@ -1,57 +1,31 @@
 import { Component } from "inferno";
-import "bulma/css/bulma.min.css"
 
-// model initial state 
-const model = () => {
-
+const styleItem = {
+    background: '#E5E9EC',
+    padding: '20px'
 }
 
+const Item = ({ item, ...props }) => (
+    <div class="column is-one-fifth has-text-centered">
+        <div style={{ ...styleItem, ...props.style  }} onClick={ () => props.onClick(item) }>
+            <figure class="image is-inline-block is-64x64">
+                <img src={ item.image } />
+            </figure>
+            <p class="title is-5">{ item.title }</p>
+            <p class="subtitle is-6">{ item.description }</p>
+        </div>
+    </div>
+)
 
-// update: update state
-const update = () => {
-    
-}
+const List = ({ items, ...props }) => items.map(item => (
+    <Item {...props} item={ item }></Item>
+));
 
+const GridList = ({ ...props }) => (
+    <div class="columns is-multiline is-tablet">
+        <List {...props}></List>
+    </div>
+)
 
-// view: HTML
-const render = () => {
-
-}
-
-class GridList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: []
-        }
-    }
-
-    componentDidMount() {
-        this.build
-    }
-
-	items() {
-		const items = this.props.items.map((item) => {
-            return (
-                <div class="column is-one-fifth">
-                    <figure class="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/256x256.png" />
-                    </figure>
-                    <p class="">{ item.title }</p>
-                </div>
-            );
-        })
-
-	}
-
-	render() {
-		
-		return(
-			<div class="columns is-multiline is-tablet">
-                { items }
-            </div>
-		);
-	}
-}
 
 export default GridList;
