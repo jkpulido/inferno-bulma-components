@@ -1,4 +1,5 @@
 import { Component } from "inferno";
+import InputEdit from "../InputEdit"
 
 const TdEdit = ({ ...props }) => props.show ? (
 	<div class="field has-addons">
@@ -22,14 +23,17 @@ class Td extends Component {
 	render() {
 		return (
 			<td>
-				<span 
+				
+				{ this.state.isEditable ? (
+					<InputEdit
+						onInput={(e) => this.setState({ value:  e.target.value})} 
+						onUpdate={e => this.props.onUpdate(this.state.value)}
+						value={this.state.value}></InputEdit>
+				) : (
+					<span 
 					contenteditable={ this.state.isEditable } 
 					onDblClick={(e) => this.setState({ isEditable: true })}>{ this.state.value }</span>
-				<TdEdit
-					show={this.state.isEditable}
-					onInput={(e) => this.setState({ value:  e.target.value})} 
-					onUpdate={e => this.props.onUpdate(this.state.value)}
-					value={this.state.value}></TdEdit>
+				)}
 			</td>
 		)
 	}
