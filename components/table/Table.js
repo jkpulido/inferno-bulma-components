@@ -24,6 +24,9 @@ class TbodyRow extends Component {
 		super(props)
 		this.state = { row: props.row}
 	}
+	componentWillReceiveProps() {
+		console.log('reciii')
+	}
 
 	update(key, val) {
 		this.setState({ row: {...this.state.row, [key]: val} })
@@ -36,15 +39,6 @@ class TbodyRow extends Component {
 			<Td
 				value={this.state.row[key]}
 				onUpdate={val => this.update(key, val)}></Td>
-			// <td>
-			// 	<span 
-			// 		contenteditable={ this.state.isEditable } 
-			// 		onInput={(e) => this.update(key, e.target.textContent)} 
-			// 		onDblClick={(e) => this.setState({ isEditable: true })}>{ this.state.row[key] }</span>
-			// 	<TdEdit
-			// 		show={this.state.isEditable}
-			// 		value={this.state.row[key]}></TdEdit>
-			// </td>
 		))
 	}
 }
