@@ -24,10 +24,7 @@ class TbodyRow extends Component {
 		super(props)
 		this.state = { row: props.row}
 	}
-	componentWillReceiveProps() {
-		console.log('reciii')
-	}
-
+	
 	update(key, val) {
 		this.setState({ row: {...this.state.row, [key]: val} })
 		this.props.onUpdate(this.state.row)
