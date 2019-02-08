@@ -6,7 +6,7 @@ const styleItem = {
 }
 
 const Item = ({ item, ...props }) => (
-    <div class="column is-6-mobile is-one-fifth-tablet  has-text-centered">
+    <div class="column has-text-centered">
         <div style={{ ...styleItem, ...props.style  }} onClick={ () => props.onClick(item) }>
             <figure class="image is-inline-block is-64x64">
                 <img src={ item.image } />

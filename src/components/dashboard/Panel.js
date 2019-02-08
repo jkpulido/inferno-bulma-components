@@ -1,7 +1,7 @@
 
 
 const Panel = ({ ...props }) => (
-    <div class={`dashboard-${props.main ? 'main is-scrollable' : 'panel is-one-quarter'} ${props.class}`}>
+    <div class={`dashboard-${props.main ? 'main' : 'panel'} ${props.class}`}>
         { props.children }
     </div>
 )
