@@ -4,6 +4,9 @@ $dashboard-panel-height: 100% !default
 $dashboard-panel-header-bottom-margin: 2rem !default
 $dashboard-panel-footer-top-margin: 2rem !default
 
+$menu-item-color: #ffffff
+$menu-label-color : #bfc6cd
+
 =flex
   display: flex
 
@@ -54,6 +57,9 @@ $dashboard-panel-footer-top-margin: 2rem !default
     &.is-large
       +panel(30rem)
 
+    &.is-dark
+      background: #33495e
+
     &-header, &-content, &-footer
       &.is-centered
         +x-centered
@@ -67,6 +73,7 @@ $dashboard-panel-footer-top-margin: 2rem !default
     &-footer
       margin-top: $dashboard-panel-footer-top-margin
 
+    
   &-main
     +flex
     +fill

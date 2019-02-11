@@ -1,5 +1,4 @@
-import "bulma"
-import "./src/sass/dashboard.sass"
+import "./src/sass/_all.sass"
 
 import "font-awesome/css/font-awesome.css";
 import Table from './src/components/table/Table';
