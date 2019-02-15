@@ -27,7 +27,7 @@ class TbodyRow extends Component {
 	
 	update(key, val) {
 		this.setState({ row: {...this.state.row, [key]: val} })
-		this.props.onUpdate(this.state.row)
+		this.props.onUpdate && this.props.onUpdate(this.state.row)
 	}
 
 
