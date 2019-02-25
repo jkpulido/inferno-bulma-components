@@ -4,9 +4,6 @@ $dashboard-panel-height: 100% !default
 $dashboard-panel-header-bottom-margin: 2rem !default
 $dashboard-panel-footer-top-margin: 2rem !default
 
-$menu-item-color: #ffffff
-$menu-label-color : #bfc6cd
-
 =flex
   display: flex
 
@@ -59,6 +56,10 @@ $menu-label-color : #bfc6cd
 
     &.is-dark
       background: #33495e
+      .menu-list a
+        color: #ffffff
+      .menu-label
+        color: #bfc6cd
 
     &-header, &-content, &-footer
       &.is-centered

@@ -1,3 +1,5 @@
+import '../../sass/dashboard.sass'
+
 const Dashboard = ({ ...props }) => (
     <div class="dashboard">
         { props.children }

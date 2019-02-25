@@ -8,6 +8,8 @@ import Navbar from './src/components/Navbar';
 import Dashboard from './src/components/dashboard/Dashboard';
 import Panel from './src/components/dashboard/Panel';
 
+import Login from './src/components/Login';
+
 export {
-	Table, GridList, Navbar, Dashboard, Panel
+	Table, GridList, Navbar, Dashboard, Panel, Login
 }
