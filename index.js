@@ -10,6 +10,8 @@ import Panel from './src/components/dashboard/Panel';
 
 import Login from './src/components/Login';
 
+import TableCrud from './src/components/tablecrud/TableCrud';
+
 export {
-	Table, GridList, Navbar, Dashboard, Panel, Login
+	Table, GridList, Navbar, Dashboard, Panel, Login, TableCrud
 }
