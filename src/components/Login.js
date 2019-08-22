@@ -11,7 +11,7 @@ class Login extends Component {
 		return (
 		    <div class={`login ${this.props.class}`}>
 		        <figure class="avatar">
-		            <img src="https://placehold.it/128x128" />
+		            <img style="width: 128px; height: 128px;" src={ this.props.imgUrl || "https://placehold.it/128x128" }/>
 		        </figure>
 		        <form>
 		            <div class="field">
